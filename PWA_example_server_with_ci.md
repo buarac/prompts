@@ -47,30 +47,77 @@ le nom, la langue, le mode d'affichage ( clair, sombre, auto ) seront associés 
       - mettre à jour la culture côté serveur
       - afficher le message de success ou d'erreur
 ### Récolte ( ajout )
+- Affichage de la liste complete des cultures
+  - l'image miniature, le nom
+- juste au-dessu de la liste afficher une zone permettant de rechercher une culture en particulier, le filtre doit s'activer dès la premère lettre saisie
+- Une fois la culture sélectionné, basculer dans le mode saisie de recolte
+  - lien pour revenir à la liste
+  - l'image centrée de la culture selecitonnée ( 1/3 de l'écran )
+  - Sous l'image le nom de la culture
+  - afficher la date et l'heure ( pas de possibilité de modifier )
+  - afficher les informations méteo réelle ( temperature, humidité, pression, vent, indice uv )
+  - en fonction du mode de recolte ( unité ou poids )
+    - si unité
+      - afficher une zone pour la saisie de la quantité récolté ( obligatoire )
+    - si poids ( grammes )
+      - afficher une zone pour la saisie de la quantité récolté, à côté de la zone afficher "grammes" ( obligatoire )
+      - afficher une case à cocher ( activer par défaut ) et une liste déroulante avec les images des différentes récipient. Si case à cocher activée, le choix doit être obligatoire 
+  - Le nécessaire pour pouvoir prendre une photo de la recolte avec la camera de l'iphone. Non obligatoire pour la saisie
+  - Bouton "Ajouter"
+  - Sur clique sur le bouton "Ajouter"
+    - Completer les données saisie avec l'id utilisateur
+    - Si case à cocher activée, soustraire le poids du recipient selectionné du poids saisie
+    - Enregistrer les données côté serveur
+    - Afficher un message de succes ou d'erreur 
+    - Revenir sur l'écran de recoltes avec la liste des cultures
 ### Historique
+- afficher une selection de l'année. La liste des années disponibles doit être calculée côté serveur en fonction des recoltes saisies
+- Sur selection d'une année
+  - afficher un tableau avec 2 colonnes ( culture et cumul )
+    - colonne1: afficher la liste unique de toutes les cultures recoltées pour l'année sélectionnée
+      - Image miniature + nom
+    - colonne2: le cumul des recoltes de la culture
+      - si mode de recolte en unité
+        - afficher le nombre d'unité cumulé
+      - si mode de recolte en poids
+        - afficher le poids cumulé. Si le cumul < 1000 indiquer les grammes, sinon convertir en kilogrammes et indiquer Kg
+  
 ### Statistiques
-### Paramètres
-- Accueil : résumé des récoltes récentes, mise en evidence de la plus recente et affichage des autres, dans la limite de la taille disponible à l'écran ( 2 ou 3 )
-- Ajouter une récolte : formulaire de saisie avec la possibilité de prendre une photo de la recolte avec l'appareil photo + recuperation des informations meteo en lien avec la date et l'heure de la recolte
-- Historique : liste de toutes les récoltes, filtrable, cumulable par culture, saison, etc..
-- Statistiques : graphiques de production par mois/utilisateur/plante
-- Paramètres : gestion du profil, export JSON
 
+### Paramètres
+- Afficher le nom de l'utilisateur ( sans pouvoir le changer )
+- Afficher l'UUID de l'utilisateur ( sans pouvoir le changer )
+- Afficher la liste des langues possibles en selectionnant celle déjà configurée pour l'utilisateur. Si pas configuré, considerer Francais par défaut
+- Afficher la liste des modes d'affichage possibles en selectionnant celui déjà configurée pour l'utilisateur. Si pas configuré, considerer mode clair par défaut
+- Si l'utilisateur modifie la langue ou le mode, enregistrer les informations côté serveur, avant tout changement d'écran
+- Indiquer si la mise à jour a pu se faire ou pas. 
+- Afficher un element de séparation 
+- Afficher la liste des récipients:
+  - L'image associée
+  - Le poids en gramme associé
 ---
 
 ## 🧭 4. Navigation
-
-- Barre de navigation présente sur toutes les pages
+- Barre supérieure ( en haut de l'écran ) présente sur toutes les pages
+  - Cette barre contient le nom de l'application et la version de l'application
+- Barre de navigation présente sur toutes les pages, en bas de l'écran
   - Accueil
   - Cultures
   - Récoltes (ajouter)
   - Historique
   - Statistiques
   - Paramètres
+- La zone centrale de l'écran est disponible pour affichage des différentes écrans. 
 ---
 
 ## 📦 5. Données à gérer (modèles)
 
+### Récipient
+- id ( de type UUID )
+- Nom
+- Image ( illustration )
+- Poids du recipient en gramme
+  
 ### Culture
 - id ( de type UUID )
 - Nom 
@@ -86,6 +133,7 @@ le nom, la langue, le mode d'affichage ( clair, sombre, auto ) seront associés 
 - date & heure (format DD/MM/YYYY HH:mm)
 - photo (URL/base64)
 - les informations méteo ( temperature, humidité, pression, vent, indice uv )
+- id utilisateur ayant réalisé la saisie
 
 ### Utilisateur
 - id ( uuid )
@@ -153,8 +201,12 @@ L’application inclut :
 
 ---
 
-## 📁 11. Détail optionnel
+## 📁 11. Détail pour le réndu ( style, ui, etc.. ) de l'application
 
-- Export des données : bouton d’export JSON global
-- Mode “invité” possible pour consultation uniquement
 - Compatible iOS Safari (capture, ajout à l’écran d’accueil, offline simplifié)
+- S'agissant d'une application de jardin, utiliser la couleur verte ( trouver une ton vert agréable )
+- Adapter le mode clair et sombre par rapport au ton général de l'application 
+- S'inspirer, au niveau rendu, de l'application youtube ( barre supérieur avec le titre, barre de navigation en bas )
+- Je fourni les images d'illustration des cultures. C'est des png-24, transparent, taille 512x512
+- Je fourni également les illustration pour les recipients. C'est des png-24, transparent, taille 512x512
+- 
