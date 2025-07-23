@@ -7,6 +7,7 @@
 
 L'application permet à deux jardiniers (moi et mon épouse) de suivre nos récoltes saisonnières, de gerer les différentes cultures, d’ajouter des photos lors de la recolte, de consulter des statistiques, de suivre les dates de semis, repiquage, plantation des différentes cultures. Les données sont sauvegardées côté serveur dans des fichiers JSON, avec possibilité d’évolution vers une base de données. Le projet intègre un système CI/CD complet pour versionnage automatique et déploiement fluide.
 L'application doit être multilangue avec prise en compte du Francais et du Serbe dès la premiere version.
+
 Nom de l'application: Baštouille
 ---
 
