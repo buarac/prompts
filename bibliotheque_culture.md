@@ -6,7 +6,10 @@ Je veux créer une bibliotheque avec des images representants différentes cultu
 
 Je vais te fournir la liste des cultures à generer, mais je souhaites que tu completes avec d'autres cultures habituellement trouvées dans un jardin / potager. 
 
-Une fois les images générées, générerer une page html affichant l'ensemble des images. 
+Crees l'ensemble des images de la bibliotheque. Procedes par étapes: tu créés 4 images et tu te mets en pause 2 minutes. Ensuite tu recommencer avec les 4 suivantes. 
+Crees une page html affichant l'ensemble des images
+Crees une archives ( idealement .zip ) avec l'ensemble des élements
+Donnes moi le lien pour telecharger l'archive.
 
 ## instructions pour la génération des images
 - Rendu doit être réaliste
