@@ -1,22 +1,23 @@
-# Demandes
-
-joues le rôle d'un agent graphiste / webdesigner 
+# Description générale
 
 Je veux créer une bibliotheque avec des images representants différentes cultures dans le jardin: fruit, légume, aromatique, fleur
 
-Je vais te fournir la liste des cultures à generer, mais je souhaites que tu completes avec d'autres cultures habituellement trouvées dans un jardin / potager. 
+J'ai une premiere liste des cultures à generer, mais je souhaites que tu completes avec d'autres cultures habituellement trouvées dans un jardin / potager. 
 
+<<<<<<< HEAD
 Crees l'ensemble des images de la bibliotheque. Procedes par étapes: tu créés 4 images et tu te mets en pause 2 minutes. Ensuite tu recommencer avec les 4 suivantes. 
 Crees une page html affichant l'ensemble des images
 Crees une archives ( idealement .zip ) avec l'ensemble des élements
 Donnes moi le lien pour telecharger l'archive.
+=======
+>>>>>>> 3873153 (ajout de la nouvelle architecture)
 
 ## instructions pour la génération des images
 - Rendu doit être réaliste
 - Vue plongeante de 3/4
-- sur un fond transparent
-- éclairage uniforme
-- format png-24 transparent
+- Sur un fond transparent
+- Eclairage uniforme
+- Format png-24 transparent
 - La culture doit aparaitre comme fraiche et appaitissente
 - Effect brillance ou legere condensation pour evoquer la fraicheur
 - Pas de décor, l'image doit être centrée sur la culture

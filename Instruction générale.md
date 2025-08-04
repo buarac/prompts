@@ -1,7 +1,6 @@
-# Instruction générale
-
-- Tu es un agent de développement web.  
-- Je veux réaliser une application web responsive avec des fonctionnalités et rendu différents en fonction du device utilisé
+# Description générale
+  
+- Application web responsive avec des fonctionnalités et rendu différents en fonction du device utilisé
 	- Si mobile ( iphone ) 
 		- rendu identique à une application native iPhone. 
 		- Prévoir PWA pour l'installation "sur l'écran d'accueil"
@@ -15,9 +14,7 @@
 - Shadui / Tailwindcss
 - ESLint + Prettier
 - Données stockées en base de données postgresql. Prevoir l’installation de postgresql 
-- Crées l’intégralité du projet avec l’ensemble des composants nécessaires
-- Prévois un fichier readme.md qui explique tous les détails et les étapes du projet : 
-installation, lancement, modification de l’identité visuel, etc, etc 
+- Prévoir un fichier readme.md qui explique tous les détails et les étapes du projet : installation, lancement, modification de l’identité visuel, etc, etc 
 - Le projet sera géré dans VSC et avec git sur GitHub
 - Postgres
 	- base de donnée déjà créée pour le projet -> nom = bastouille
@@ -32,10 +29,11 @@ installation, lancement, modification de l’identité visuel, etc, etc
 # Fonctionnalités
 
 ## Gestion des cultures 
-- ajout
+- création 
 - modification
 - liste
 - suppression
+- recherche par le nom
 
 ### Modele culture
 - id: uuid, generer par postgres, clé primaire
@@ -49,6 +47,7 @@ installation, lancement, modification de l’identité visuel, etc, etc
 - liste
 - modification
 - suppression
+- filte par année, par categorie, par mois ( filtres cummulatifs )
 
 ### Modele Recolte
 - id: auto incrementé, clé primaire
@@ -104,7 +103,7 @@ installation, lancement, modification de l’identité visuel, etc, etc
 
 ### Ecran détail culture
 - Affichage de toutes les données d'une culture 
-- l'image s'affiche en 196x196
+- l'image s'affiche en 256x256
 - Un bouton permet d'ajouter une recolte
 - Possibilité de modifier le nom, la catégorie et le mode de récolte
 - Si une des données est modifiée afficher un bouton mettre à jour
@@ -126,6 +125,5 @@ installation, lancement, modification de l’identité visuel, etc, etc
 	- Col3 : nombre d’unité pour les cultures avec mode_recolte=poids_unite
 
 ## Ecran Parametrage
-- Possibilité de changer de theme: "Soleil du Sud" et "Lavande et Romarin"
-- Possibilité de changer de mode: mode clair / mode dark / mode system
-
+- Toggle pour changer de theme: "Soleil du Sud" et "Lavande et Romarin"
+- Toggle pour changer de mode: mode clair / mode dark / mode system
